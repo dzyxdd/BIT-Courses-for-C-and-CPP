@@ -1,4 +1,5 @@
 #include <stdio.h>
-int main(){
+
+int main() {
     printf("Welcome\nto\nBIT.\n");
 }

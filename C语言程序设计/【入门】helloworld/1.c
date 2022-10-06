@@ -1,4 +1,5 @@
 #include <stdio.h>
-int main(){
+
+int main() {
     puts("Hello world.");//also can use printf
 }

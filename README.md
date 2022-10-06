@@ -10,12 +10,13 @@ BIT-COURSES-FOR-C-AND-CPP
 ├─课程1
 │  ├─题目1
 │  │      1.c
-│  │      题面.md
+│  │      2.c
+│  │      desc.md
 │  │
 │  └─题目2
 │          1.c
-│          题面.md
+│          desc.md
 │
 └─课程2
 
-需要补充的题目请在Issue中提出
+需要补充的题目以及有bug的代码请在Issue中提出
