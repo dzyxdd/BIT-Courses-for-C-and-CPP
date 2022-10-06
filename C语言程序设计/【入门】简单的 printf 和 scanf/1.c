@@ -3,5 +3,5 @@
 int main() {
     int a;
     scanf("%d", &a);
-    printf("%d\n", a * a * a);//or use pow(a,3)
+    printf("x=%d,x=%o,x=%x\n", a, a, a);
 }
