@@ -17,6 +17,6 @@ BIT-COURSES-FOR-C-AND-CPP\
 │          1.c\
 │          desc.md\
 │\
-└─课程2\
+└─课程2
 
 需要补充的题目以及有bug的代码请在Issue中提出
