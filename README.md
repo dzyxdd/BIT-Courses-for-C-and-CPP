@@ -4,19 +4,19 @@
 
 项目结构：
 
-BIT-COURSES-FOR-C-AND-CPP
-│  README.md
-│
-├─课程1
-│  ├─题目1
-│  │      1.c
-│  │      2.c
-│  │      desc.md
-│  │
-│  └─题目2
-│          1.c
-│          desc.md
-│
-└─课程2
+BIT-COURSES-FOR-C-AND-CPP\
+│  README.md\
+│\
+├─课程1\
+│  ├─题目1\
+│  │      1.c\
+│  │      2.c\
+│  │      desc.md\
+│  │\
+│  └─题目2\
+│          1.c\
+│          desc.md\
+│\
+└─课程2\
 
 需要补充的题目以及有bug的代码请在Issue中提出
