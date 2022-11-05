@@ -1,25 +1,25 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
 
-int pd(int k, int t) {
-    for (int i = 1; i <= t; i++)
-        if ((k / (int) pow(10, t - i)) % (i * i) != 0)
-            return 0;
-    return 1;
+int n, count = 0;
+
+void solve(int t, int k) {
+	if (k == n + 1) {
+		if (n != 0)count++;
+		return;
+	}
+	for (int i = 0; i < 10; i++) {
+		if (k == 1 && i == 0)continue;
+		if ((t * 10 + i) % (k * k) == 0)
+			solve(t * 10 + i, k + 1);
+	}
 }
 
 int main() {
-    int n, sum = 0;
-    scanf("%d", &n);
-    if (n == 0 || n == 8) {
-        printf("%d", sum);
-        return 0;
-    }
-    for (int i = pow(10, n - 1); i < pow(10, n); i++) {
-        if (pd(i, n) == 1)
-            sum++;
-    }
-    printf("%d\n", sum);
-    return 0;
+	scanf("%d", &n);
+	if (n == 0) {
+		puts("0");
+		return 0;
+	}
+	solve(0, 1);
+	printf("%d\n", count);
 }
-
