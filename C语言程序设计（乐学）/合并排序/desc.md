@@ -66,17 +66,3 @@ aceehrt
 ```
 aceeegghloort
 ```
-
-### 样例3
-
-#### Input
-
-```
-hello world!
-```
-
-#### Output
-
-```
- !dehllloorw
-```
