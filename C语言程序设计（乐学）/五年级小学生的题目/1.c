@@ -1,4 +1,3 @@
-#include <limits.h>
 #include<stdio.h>
 
 char s[100];
@@ -11,7 +10,7 @@ void print(int max_num, int min_num, int result, char op) {
 
 int main() {
     scanf("%s", s);
-    int maxn = INT_MIN, minn = INT_MAX, t;
+    int maxn = 0x80000000, minn = 0x7fffffff, t;
     while (s[2] != '=') {
         sscanf(s, "%d,%s", &t, s);
         if (t > maxn)maxn = t;
