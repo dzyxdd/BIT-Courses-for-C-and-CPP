@@ -1,27 +1,34 @@
-#include <limits.h>
 #include<stdio.h>
 
-char s[100];
-
-void print(int max_num, int min_num, int result, char op) {
-    if (max_num < 0)printf("(%d) %c (%d) = %d\n", max_num, op, min_num, result);
-    else if (min_num < 0)printf("%d %c (%d) = %d\n", max_num, op, min_num, result);
-    else printf("%d %c %d = %d\n", max_num, op, min_num, result);
-}
+int b[12][12];
 
 int main() {
-    scanf("%s", s);
-    int maxn = INT_MIN, minn = INT_MAX, t;
-    while (s[2] != '=') {
-        sscanf(s, "%d,%s", &t, s);
-        if (t > maxn)maxn = t;
-        if (t < minn)minn = t;
+    int n, x = 1, y = 1, tot;
+    scanf("%d", &n);
+    b[x][y] = 1;
+    tot = 1;
+    while (tot < n * n) {
+        if (y + 1 <= n) {
+            tot++;
+            b[x][++y] = tot;
+        }
+        while (y - 1 > 0 && x + 1 <= n && !b[x + 1][y - 1]) {
+            tot++;
+            b[++x][--y] = tot;
+        }
+        if (x + 1 <= n) {
+            tot++;
+            b[++x][y] = tot;
+        }
+        while (y + 1 <= n && x - 1 > 0 && !b[x - 1][y + 1]) {
+            tot++;
+            b[--x][++y] = tot;
+        }
     }
-    switch (s[0]) {
-        case '+':print(maxn, minn, maxn + minn, s[0]); break;
-        case '-':print(maxn, minn, maxn - minn, s[0]); break;
-        case '*':print(maxn, minn, maxn * minn, s[0]); break;
-        case '/':print(maxn, minn, maxn / minn, s[0]); break;
-        case '%':print(maxn, minn, maxn % minn, s[0]); break;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++)
+            printf("%d ", b[i][j]);
+        printf("\n");
     }
+    return 0;
 }
