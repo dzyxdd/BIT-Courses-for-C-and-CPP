@@ -12,12 +12,12 @@ BIT-COURSES-FOR-C-AND-CPP
 │  ├─题目1
 │  │      1.c
 │  │      2.c
-│  │      desc.md
+│  │      README.md
 │  │
 │  └─题目2
 │  │      1.c
 │  │      2.cpp
-│  │      desc.md
+│  │      README.md
 │  │
 └─课程2
 ```
